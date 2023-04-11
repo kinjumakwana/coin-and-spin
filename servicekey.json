@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "coin-and-spain",
+  "private_key_id": "4d7eeb94fea8f1d78ff324199919465f5965e902",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCmHIxS2/x30Hpm\njF3K3W+f2ut7W5zEXUO9lXALZLLibZPO1GCpSQd+TDd0y0aIWprCkjR5mGSdrHUi\nmVrZHGVliVkfsPNQfg26JFO7emhSOsZAKHDnN9R7yWCxZlRSt+QKWrN9eEz0Fk7v\nikBgsYNPADUa6eJ3TBEgzgVUf3JtcIFsvsC6qKtAcjXODkYijzxlfA4pHTB0YAAB\n1TIKpBRNI82RxutPmM59RNpCWPL0XtbqEmCSRYKiJpL4bh7DJZE3sFX691PUTwy4\nig1TiDSZjNMr/H5TEQLcGRpUAmHIOELbStu4WgYZEzubtHABpbZUFg4s+MfzNZMY\n8D0zZwmTAgMBAAECggEACNSIAcLvov+M9NTttXeGVAqYra2QjKsNNfpILare4YTZ\nWyDUufBdEByFbtV8JzUdzfhksWQQUTDA505x/bbx4u8QCExpRXRLTtkDLyT81QY1\nJ2We9C5LwtV7040GMCwrWKuP/Wb+5ujQAxF9MPFZcsJ8Ot/c/zd8H5t5aA+q/ws/\nyfybv5LvJA4OBtLPdxzZ0zrDcjYUtXiHnxvwb+B/BUz9G5gevL2xUAZ8jySNkhjp\nJ8GysGoR+pn5Qd1W6VEleVewKSDSmnmTRA7dnYNy8gK3JwWXvjXpbf3npvwWRHXY\n4vltKzUbT7tJ3WeNYJhI0k2F41NgQL5EpNFcCrBgtQKBgQDmO3OppTVyGWGf05kf\nfPgwxENqmTG8PNWNYFQ27mWWnNyBkJ/V5jWuuqdD+ahF7Yp3OuTxoQpJ4iNEjMoX\n4sm3fYRMM8Y9ssDe336DkMMB6pqJsXu6Dt3mYz5leip6VXIjQ6h8R9I9npxL9VW4\njaCtb7hwHKzBgK+iYTNHl5/Z7wKBgQC4s+2Hq3NkI/n1piLtdXK5qqg+3mvbnW5S\nX8tBftAweUB4Ql0bAawQQ5E2GTAXONXsPlsxO8KSVjn2iQntLs8iks9zRoBCQoLk\n5QZ3pOH+anxijidbI9TiZ1dI+Y7R11BRbSm6mMQlvUCstKGzEfhdfPzQpJCXMtyM\nJqKHQlG+nQKBgBrRfg2a0vjxf++wJDwIwJhdpES8h5CXvYB0Yhrr9iVvLDhjclrm\nMAakc2t1n2ZV3zU4RQbobVxh3R3VEI1ru3eGRWzi8wqo0dKkUgZdTHnirBGx/OmV\nZb+6e8AyVNRfM6Zr8SpY62KGIUqvz0ZqKPdK9j8I+A6qQMs3a1PBk7s9AoGAX1q0\npDgFaIuSPhm5KnJZ+jR6i4p0kHqkO+6slnGLtZrDh9JrEsg4NmVLkGxMgZCcEEzY\n83/woW/WmMqCz2o9EZJNeyvIh2yi+tyqDBaZfakn8hGFi+3ht8i2LTx5WSgZlRAQ\nXP8FNJ6Rxxex6yq52Dnwox5ybzyY09oWSlIYtZkCgYEAgAZLSTQ8e5UiPX3Tqni4\ndM909bYfzTJJCUYI45slASU8v8T6Szb1Pc79q+W+O1cCGKUGAKRm5TUzTvGd5D2/\nfqzU4zAToV2aWQNdBq2Np3mlfZCl6DTbKFchIecZt6l+qEMjrG4UDgzVMeugPNGn\n92M57Rxr3T06gasHYefnfM0=\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-7c8f7@coin-and-spain.iam.gserviceaccount.com",
+  "client_id": "117590197105364139509",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-7c8f7%40coin-and-spain.iam.gserviceaccount.com"
+}
