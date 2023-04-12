@@ -7,11 +7,14 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
+from django.db import IntegrityError
 import schedule
 import time
 import demoji
 import emoji
 import re 
+# from coinspinapp.models import Coinmaster
+import requests
 # firebased 
 import firebase_admin
 from firebase_admin import credentials
@@ -50,25 +53,29 @@ class Facebookboat:
             matches = re.findall(url_pattern, text)
 
             if len(matches) > 0:
-                url = matches[0]
-                print('URL:', url)
-                text = text.replace(url, '') # remove URL from text
+                link = matches[0]
+                print('URL:', link)
+                text = text.replace(link, '') # remove URL from text
                 # Check if URL already exists in database
-                query = db.collection('Post').where('Link', '==', url)
+                query = db.collection('Post').where('Link', '==', link)
                 existing_posts = query.get()
 
                 if len(existing_posts) > 0:
                     print('URL already exists in database')
                 else:
                     post_data['Detail'] = text
-                    post_data['Link'] = url
+                    post_data['Link'] = link
                     post_data['Title'] = ''
                     db.collection('Post').add(post_data)
-                    
-            #     post_data['Detail'] = text
-            #     post_data['Link'] = url
-            #     post_data['Title'] = ''
-            #     db.collection('Post').add(post_data)
+                    # addpost = Coinmaster.objects.create(title="",detial=text,link=url)
+                    # addpost.save()
+                    try:
+                        url = 'http://localhost:8000/add_post/'
+                        data = {'detail': text, 'link': link, 'title':''}
+                        response = requests.post(url, data=data)
+                        print(response.content)
+                    except IntegrityError:
+                        print('URL already exists in Django database')
             else:
                 post_data['Detail'] = 'No Data found'
                 post_data['Link'] = 'No URL found'
@@ -92,9 +99,9 @@ class Facebookboat:
             # schedule.every().day.at("08:00").do(Fabboat.login())
 
             # Run the scheduled tasks
-            while True:
-                schedule.run_pending()
-                time.sleep(1)
+            # while True:
+            #     schedule.run_pending()
+            #     time.sleep(1)
              
         except Exception as e:
             print(e)
