@@ -13,12 +13,16 @@ import time
 import demoji
 import emoji
 import re 
-# from coinspinapp.models import Coinmaster
+# from models import Post
 import requests
 # firebased 
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
+# from django.conf import settings
+
+# import os
+# os.environ.setdefault("DJANGO_SETTINGS_MODULE", "coinspinapp.settings")
 
 # Setup
 cred = credentials.Certificate("servicekey.json")
@@ -60,6 +64,15 @@ class Facebookboat:
                 query = db.collection('Post').where('Link', '==', link)
                 existing_posts = query.get()
 
+                dataget = db.collection('Post')
+                print("get",dataget.get())
+                
+                for doc in dataget.stream():
+                    print(f'{doc.id}')
+                    # print(doc.to_dict())
+                    # post = Post(id=doc.id, **doc.to_dict())
+                    # data.append(post)
+            
                 if len(existing_posts) > 0:
                     print('URL already exists in database')
                 else:
@@ -69,6 +82,7 @@ class Facebookboat:
                     db.collection('Post').add(post_data)
                     # addpost = Coinmaster.objects.create(title="",detial=text,link=url)
                     # addpost.save()
+                    
                     try:
                         url = 'http://localhost:8000/add_post/'
                         data = {'detail': text, 'link': link, 'title':''}
